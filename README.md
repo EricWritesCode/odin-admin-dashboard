@@ -1,0 +1,1 @@
+Admin dashboard project for Odin Intermediate HTML/CSS course.
