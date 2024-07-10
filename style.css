@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+
+:root {
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --zinc-50: #fafafa;
+  --zinc-200: #e4e4e7;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #1f2937;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --headers-fonts: "Teko", sans-serif;
+  --body-fonts: "Dosis", sans-serif;
+}
+
+/* Clear browser theming */
+* {
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+  appearance: none;
+  border: none;
+}
+
+/* Colors and Theming */
+
+* {
+  color: var(--zinc-950);
+  font-family: var(--body-fonts);
+}
+
+.header {
+  background-color: var(--zinc-50);
+}
+
+#search-box {
+  background-color: var(--zinc-200);
+}
+
+.sidebar,
+.header-buttons button {
+  background-color: var(--zinc-700);
+}
+
+.sidebar *,
+.header-buttons * {
+  color: white;
+}
+
+.main-content {
+  background-color: var(--slate-300);
+}
+
+.proj-item {
+  background-color: var(--zinc-50)
+}
+
+.announcements div {
+  background-color: var(--zinc-50);
+}
+
+.trend-user {
+  background-color: var(--zinc-50);
+}
+
+/* General */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: minmax(min-content, 15%) 1fr;
+  grid-template-columns: minmax(min-content, 20%) 1fr;
+}
+
+h1 {
+  font-size: 2.1em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.icon {
+  fill: --zinc-950;
+  height: 28px;
+}
+
+.user-pic {
+  height: 56px;
+  clip-path: circle(28px at center);
+}
+
+.header {
+  grid-column: 1 span 2;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.cards-title {
+  padding: 32px 8px 16px 8px;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.proj-cards,
+.ann-items,
+.trend-cards {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* Individual Styles */
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+#search-box {
+  width: 80%;
+  font-size: 1.2em;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 16px;
+}
+
+.header-user-info {
+  display: flex;
+  gap: 24px;
+  margin: 8px 32px;
+  align-items: center;
+  justify-content: end;
+}
+
+.header-user-info h3 {
+  flex-grow: 2;
+}
+
+.header-greeting {
+  height: min-content;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 16px;
+}
+
+.header-greeting p {
+  font-weight: 600;
+}
+
+.header-greeting .user-pic {
+  height: 72px;
+  clip-path: circle(36px at center);
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.header-buttons button {
+  padding: 8px 24px;
+  border-radius: 24px;
+}
+
+.sidebar {
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  padding: 16px;
+}
+
+.sidebar svg {
+  fill: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo svg {
+  height: 56px;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style-type: none;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.side-icon {
+  height: 32px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+  grid-row: 1 / span 2;
+}
+
+.proj-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 250px;
+  gap: 16px;
+}
+
+.proj-item {
+  border-left: 8px solid var(--slate-500);
+  padding-left: 8px;
+}
+
+.ann-items, .trend-cards {
+  margin-right: 16px;
+}
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcements div {
+  border-radius: 16px;
+}
+
+.ann-items {
+  height: 100%;
+}
+
+.trend-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+
+.trend-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-deets :nth-child(2) {
+  color: var(--zinc-600);
+}
+
+.user-deets p {
+  display: -webkit-box;
+  overflow: hidden;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; 
+  padding: 2px 0px;
+}
